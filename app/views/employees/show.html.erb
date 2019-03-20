@@ -1,0 +1,13 @@
+<h2>Name:</h2>
+<p><%= "#{@employee.first_name} #{@employee.last_name}" %>
+<h2>Alias:</h2>
+<p><%= @employee.alias %>
+<h2>Title:</h2>
+<p><%= @employee.title %>
+<h2>Office:</h2>
+<p><%= @employee.office %>
+<h2>Dog:</h2>
+<p><%= @employee.dog.name %>
+<h2>Picture:</h2>
+<p><img src="<%= @employee.img_url %>" alt="Employee Image">
+
