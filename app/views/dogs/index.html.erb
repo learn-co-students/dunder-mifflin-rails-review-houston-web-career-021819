@@ -1,0 +1,14 @@
+<h1>All Dogs</h1>
+<% @dogs.each do |dog |%>
+    <%= link_to dog.name, dog%>
+<% end %>
+
+<h1>Sort By Number of Employees</h1>
+<% dog_sort = (@dogs.sort_by { |dog| dog.employees.length }).reverse %>
+    <% dog_sort.each do |dog| %>
+<p>Dog Name: <%= dog.name %>
+<ul>
+<p>Number of Employees: <%= dog.employees.length %>
+</ul>
+<% end %>
+
