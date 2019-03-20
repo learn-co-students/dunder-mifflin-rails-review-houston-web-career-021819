@@ -1,0 +1,23 @@
+<h2>Edit Employee</h2>
+<%= form_for(@employee) do |f|%>
+
+<label>Enter the first name:</label>
+<%= f.text_field :first_name %><br>
+
+<label>Enter the last name:</label>
+<%= f.text_field :last_name %><br>
+
+<label>Alias:</label>
+<%= f.text_field :alias %><br>
+
+<label>Office:</label>
+<%= f.text_field :office %><br>
+
+<label>Enter the url of the employee photo</label>
+<%= f.text_field :img_url %><br>
+
+<label>Choose a dog from Dunder Mifflin's dogs:</label>
+<%= f.select :dog_id,  @dogs.collect {|d| [ d.name, d.id ] }, :class => 'genForm_dropBox'%>
+
+<%= f.submit%>
+<% end %>

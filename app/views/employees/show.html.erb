@@ -1,0 +1,24 @@
+<ul>
+<h1>Employee's Profile</h1>
+<label>Full Name:</label>
+<li><%= "#{@employee.first_name} #{@employee.last_name}"%></li>
+
+<label>Alias:</label>
+<li><%= @employee.alias %></li>
+
+<label>Title: </label>
+<li><%= @employee.title %></li>
+
+<label>Office: </label>
+<li><%= @employee.office%></li>
+
+
+<label>Dog:</label>
+<li><%= @employee.dog.name %></li>
+
+
+<label>Photo of the employee: </label><br>
+<img src = "<%=@employee.img_url%>" width="500" height="333">
+
+</ul>
+
