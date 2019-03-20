@@ -1,0 +1,15 @@
+<h1>Info Page for <%=@employee.first_name%></h1>
+
+<h3>First Name: <%=@employee.first_name%></h3>
+<h3>Last Name: <%=@employee.last_name%></h3>
+<h3>Alias: <%=@employee.alias%></h3>
+<h3>Title: <%=@employee.title%></h3>
+<h3>Office: <%=@employee.office%></h3>
+
+<h3>Dog: <%= link_to @employee.dog.name, dog_path(@employee.dog) %></h3>
+<img src=<%= @employee.img_url%> alt ="Employee Pic">
+
+<div>
+<%= link_to "Edit Employee", edit_employee_path(@employee) %>
+
+</div>
