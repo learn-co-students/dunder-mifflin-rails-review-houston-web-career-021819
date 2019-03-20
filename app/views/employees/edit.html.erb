@@ -1,0 +1,15 @@
+<%= form_for (@employee) do |e| %>
+    <label>First Name: </label>
+    <%= e.text_field :first_name %><br>
+    <label>Last Name:</label>
+    <%= e.text_field :last_name %><br>
+    <label>Alias: </label>
+    <%= e.text_field :alias %><br>
+    <label>Title: </label>
+    <%= e.text_field :title %><br>
+    <label>Office: </label>
+    <%= e.text_field :office %><br>
+    <label>Dogs: </label>
+    <%= e.collection_select :dog_id, Dog.all, :id, :name %><br>
+    <%= e.submit "Update Employee" %>
+<%end%>

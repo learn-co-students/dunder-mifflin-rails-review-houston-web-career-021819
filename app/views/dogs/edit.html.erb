@@ -1,0 +1,10 @@
+<h1>Update a Dog</h1>
+<%= form_for (@dog) do |e| %>
+    <label>Name: </label>
+    <%= e.text_field :name %><br>
+    <label>Breed:</label>
+    <%= e.text_field :breed %><br>
+    <label>Age: </label>
+    <%= e.text_field :age %><br>
+    <%= e.submit "Update Dog" %>  
+<%end%>

@@ -1,0 +1,35 @@
+
+    <h1>Employees: </h1> 
+    <div> 
+    <label>Name:</label>
+     <%=@employee.to_s %>
+    </div>
+
+    <div>
+    <label> Alias:</label>
+     <%=@employee.alias %>
+    </div>
+     
+    <div>
+     <label> Title:</label>
+      <%=@employee.title%>
+    </div>   
+     
+     <div>
+     <label> Office:</label>
+      <%=@employee.office %>
+     </div>
+           
+    <div>
+    <label> Dogs:</label>
+    
+         <% @dogs.each do |dog| %>
+           <%= dog.name%>
+         <% end %>
+    </div>
+
+    <img src =<%= @employee.img_url%>>
+
+      
+    
+       

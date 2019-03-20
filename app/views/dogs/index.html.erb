@@ -1,0 +1,7 @@
+<% @dogs.each do |dog| %>
+    <ul>
+        <label>Dog Name:</label>
+        <li><%=link_to dog.name, dog_path(dog) %></li><br>
+        Dog Owners: <%=dog.employees.length %>
+    </ul>
+<%end%> 
