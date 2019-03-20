@@ -1,0 +1,9 @@
+
+<h1><%= @employee.first_name%></h1>
+<h3><%= @employee.last_name%></h3>
+<h3><%= @employee.alias%></h3>
+<h3><%= @employee.office%></h3>
+<img src="<%= @employee.img_url%>">
+<h3><%= @dog.name%><h3>
+<%=link_to 'Edit dog', edit_dog_url(@dog.id)%>
+
