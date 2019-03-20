@@ -1,12 +1,12 @@
 class DogsController < ApplicationController
     def index
         @dogs = Dog.all
-        @dogs_sorted = 
+       
     end
     
-    def sort_with_employee_count
-        
-    end
+    # def sort_with_employee_count
+    #     @dogs_sorted = Dog.all.map {|d| }
+    # end
     def new
         @employees = Employee.all
         @dog = Dog.new
