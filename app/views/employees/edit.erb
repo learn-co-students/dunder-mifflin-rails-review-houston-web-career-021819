@@ -1,0 +1,18 @@
+<h2>Edit Employee</h2>
+<%=form_for(@employee) do |f|%>
+<label>First Name</label>
+<%= f.text_area :first_name%>
+<label>Last Name</label>
+<%= f.text_area :last_name%>
+<label>Alias</label>
+<%= f.text_area :alias%>
+<label>Office</label>
+<%= f.text_area :office%>
+</div>
+<label>Picture</label>
+<%= f.text_area :img_url%>
+<label>Choose Your Dog</label>
+<%=f.select :dog_id, @dogs.collect{|d| [d.name, d.id]}, :class =>'genForm_dropBox'%>
+</div>
+<%=f.submit%>
+<%end%>

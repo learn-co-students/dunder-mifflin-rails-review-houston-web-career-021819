@@ -1,0 +1,4 @@
+<%@employees.each do |e|%>
+<li><a href="/employees/<%= (e.id)%>"><%="#{e.first_name} #{e.last_name}" %></a></li>
+<%end%>
+<%= link_to 'new', new_employee_url%>
