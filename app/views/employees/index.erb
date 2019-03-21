@@ -1,0 +1,26 @@
+<h1>All Employees</h1>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Alias</th>
+      <th scope="col">Title</th>
+      <th scope="col">Office</th>
+      <th scope="col">Dog</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% r_count = 0 %>
+  <% @employees.each do |employee| %>
+    <tr>
+      <th scope="row"><%= r_count += 1 %></th>
+      <td><%= link_to employee.to_s, employee_path(employee) %></td>
+      <td><%= employee.alias %></td>
+      <td><%= employee.title %></td>
+      <td><%= employee.office %></td>
+      <td><%= employee.dog.name %></td>
+    </tr>
+    <%end%>
+  </tbody>
+</table>
