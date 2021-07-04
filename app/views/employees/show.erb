@@ -1,0 +1,18 @@
+<style>
+div.a {
+    text-align: center;
+}
+</style>
+
+<div class="a">
+    <h1><%=@employee.to_s%></h1>
+    <img src=<%=@employee.img_url%> />
+</div>
+<div class="a">
+    <ul style="list-style: none;">
+        <li>Alias: <%=@employee.alias%></li>
+        <li>Title: <%=@employee.title%></li>
+        <li>Office: <%=@employee.office%></li>
+        <li>Dog: <%=@dog.name%></li>
+    </ul>
+</div>

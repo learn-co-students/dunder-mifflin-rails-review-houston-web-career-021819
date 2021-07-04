@@ -1,0 +1,38 @@
+<div class="container">
+<div style='text-align: center'>
+<h1>Employee Registration Form</h1>
+</div>
+<%= form_for(@employee) do |f| %>
+    <div class="form-group">
+        <label>Profile Picture:</label>
+        <%= f.text_field :img_url, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+        <label>First Name:</label>
+        <%= f.text_field :first_name, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+        <label>Last Name:</label>
+        <%= f.text_field :last_name, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+        <label>Alias:</label>
+        <%= f.text_field :alias, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+        <label>Title:</label>
+        <%= f.text_field :title, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+        <label>Office:</label>
+        <%= f.text_field :office, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+        <label>Dog:</label>
+        <%= f.collection_select :dog_id, @dogs, :id, :name, class: 'form-control'%>
+    </div>
+    <div style='text-align: center' class="form-group">
+        <%= f.submit value="Create Account" %>
+    </div>
+    <%end%>
+    </div>
